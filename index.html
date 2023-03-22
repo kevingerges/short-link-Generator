@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
+  </head>
+  <style type="text/css">
+    @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #000000;
+}
+.wrapper {
+    position: relative;
+    max-width: 382px;
+    height: 243px;
+    width: 423px;
+    background: #fff;
+    border-radius: 12px;
+    padding: 30px 25px;
+    box-shadow: 0 5px 10px rgb(0 0 0 / 10%);
+}
+.wrapper .link-box {
+  position: relative;
+  height: 50px;
+}
+.link-box input {
+  height: 100%;
+  width: 100%;
+  border-radius: 8px;
+  padding: 0 45px 0 15px;
+  border: 1px solid #aaa;
+  background-color: transparent;
+}
+.link-box .copy-icon {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  color: #707070;
+  font-size: 20px;
+  cursor: pointer;
+  transform: translateY(-50%);
+}
+.copy-icon:hover {
+  color: #826afb;
+}
+.wrapper .range-box {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+}
+.range-box input {
+    width: 100%;
+    height: 5px;
+    accent-color: #5164462b;
+    cursor: pointer;
+}
+.range-box .slider-number {
+  min-width: 30px;
+  text-align: right;
+  font-size: 17px;
+  color: #707070;
+}
+
+.wrapper .generate-button {
+    width: 100%;
+    color: #b9b5b5;
+    padding: 12px 0;
+    position: relative;
+    margin-top: 20px;
+    background: #000000;
+    border: none;
+    border-radius: 8px;
+    top: 54px;
+    cursor: pointer;
+    transition: all 0.2s cubic-bezier(0.6, -0.28, 0.74, 0.05);
+}
+}
+.generate-button:hover {
+  background-color: #826afb;
+}
+
+  </style>
+  <body>
+    <div class="wrapper">
+      <div class="link-box">
+        <input type="text">
+        <i class="uil uil-copy copy-icon"></i>
+      <div class="link-box">
+        <input type="text">
+          <i class="uil uil-copy copy-icon"></i>
+      </div>
+    </div>
+
+
+      <button class="generate-button">Generate a short Link</button>
+    </div>
+
+    </script>
+  </body>
+</html>
