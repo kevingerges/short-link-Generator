@@ -1,204 +1,228 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
 </head>
 <style type="text/css">
-  @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
-
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Poppins", sans-serif;
-  }
-
-  body {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #000000;
-  }
-
-  .wrapper {
-    position: relative;
-    max-width: 382px;
-    height: 243px;
-    width: 423px;
-    background: #fff;
-    border-radius: 12px;
-    padding: 30px 25px;
-    box-shadow: 0 5px 10px rgb(0 0 0 / 10%);
-  }
-
-  .wrapper .link-box {
-    position: relative;
-    height: 50px;
-  }
-
-  .link-box input {
-    height: 100%;
-    width: 100%;
-    border-radius: 8px;
-    padding: 0 45px 0 15px;
-    border: 1px solid #aaa;
-    background-color: transparent;
-  }
-
-  .link-box .copy-icon {
-    position: absolute;
-    right: 15px;
-    top: 50%;
-    color: #707070;
-    font-size: 20px;
-    cursor: pointer;
-    transform: translateY(-50%);
-  }
-
-  .copy-icon:hover {
-    color: #826afb;
-  }
-
-  .wrapper .range-box {
-    display: flex;
-    align-items: center;
-    margin-top: 20px;
-  }
-
-  .range-box input {
-    width: 100%;
-    height: 5px;
-    accent-color: #5164462b;
-    cursor: pointer;
-  }
-
-  .range-box .slider-number {
-    min-width: 30px;
-    text-align: right;
-    font-size: 17px;
-    color: #707070;
-  }
-
-  .wrapper .generate-button {
-    width: 100%;
-    color: #b9b5b5;
-    padding: 12px 0;
-    position: relative;
-    margin-top: 20px;
-    background: #000000;
-    border: none;
-    border-radius: 8px;
-    top: 54px;
-    cursor: pointer;
-    transition: all 0.2s cubic-bezier(0.6, -0.28, 0.74, 0.05);
-  }
-
-  .generate-button:hover {
-    background-color: #826afb;
-  }
-
-  /* Tooltip container */
-  .tooltip {
-    position: absolute;
-    display: inline-block;
-    opacity: 0;
-    pointer-events: none; 
-    padding: 5px;
-    background-color: #000;
-    color: #fff;
-    font-size: 12px;
-    line-height: 16px;
-    z-index: 1;
-    transition: opacity 0.3s ease-in-out;
-  }
-  
-  /* Tooltip arrow */
-  .tooltip::after {
-    content: " ";
-    position: absolute;
-    top: 100%;
-    left: 50%;
-    margin-left: -5px;
-    border-width: 5px;
-    border-style: solid;
-    border-color: transparent transparent #000 transparent;
-  }
-  
-  /* Show the tooltip text on hover */
-  .tooltip:hover {
-    opacity: 1;
-  }
-  ::-webkit-input-placeholder {
-    /* Chrome/Opera/Safari */
-    color: #707070;
-}
-::-moz-placeholder {
-    /* Firefox 19+ */
-    color: #707070;
-}
-:-ms-input-placeholder {
-    /* IE 10+ */
-    color: #707070;
-}
-:-moz-placeholder {
-    /* Firefox 18- */
-    color: #707070;
-}
+    @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
+    }
+    
+    body {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #000000;
+    }
+    
+    .wrapper {
+        position: relative;
+        max-width: 382px;
+        height: 243px;
+        width: 423px;
+        background: #fff;
+        border-radius: 12px;
+        padding: 30px 25px;
+        box-shadow: 0 5px 10px rgb(0 0 0 / 10%);
+    }
+    
+    .wrapper .link-box {
+        position: relative;
+        height: 50px;
+    }
+    
+    .link-box input {
+        height: 100%;
+        width: 100%;
+        border-radius: 8px;
+        padding: 0 45px 0 15px;
+        border: 1px solid #aaa;
+        background-color: transparent;
+    }
+    
+    .link-box .copy-icon {
+        position: absolute;
+        right: 15px;
+        top: 50%;
+        color: #707070;
+        font-size: 20px;
+        cursor: pointer;
+        transform: translateY(-50%);
+    }
+    
+    .copy-icon:hover {
+        color: #826afb;
+    }
+    
+    .wrapper .range-box {
+        display: flex;
+        align-items: center;
+        margin-top: 20px;
+    }
+    
+    .range-box input {
+        width: 100%;
+        height: 5px;
+        accent-color: #5164462b;
+        cursor: pointer;
+    }
+    
+    .range-box .slider-number {
+        min-width: 30px;
+        text-align: right;
+        font-size: 17px;
+        color: #707070;
+    }
+    
+    .wrapper .generate-button {
+        width: 100%;
+        color: #b9b5b5;
+        padding: 12px 0;
+        position: relative;
+        margin-top: 20px;
+        background: #000000;
+        border: none;
+        border-radius: 8px;
+        top: 54px;
+        cursor: pointer;
+        transition: all 0.2s cubic-bezier(0.6, -0.28, 0.74, 0.05);
+    }
+    
+    .generate-button:hover {
+        background-color: #826afb;
+    }
+    /* Tooltip container */
+    
+    .tooltip {
+        position: absolute;
+        display: inline-block;
+        opacity: 0;
+        pointer-events: none;
+        padding: 5px;
+        background-color: #000;
+        color: #fff;
+        font-size: 12px;
+        line-height: 16px;
+        z-index: 1;
+        transition: opacity 0.3s ease-in-out;
+    }
+    /* Tooltip arrow */
+    
+    .tooltip::after {
+        content: " ";
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        margin-left: -5px;
+        border-width: 5px;
+        border-style: solid;
+        border-color: transparent transparent #000 transparent;
+    }
+    /* Show the tooltip text on hover */
+    
+    .tooltip:hover {
+        opacity: 1;
+    }
+    
+     ::-webkit-input-placeholder {
+        /* Chrome/Opera/Safari */
+        color: #707070;
+    }
+    
+     ::-moz-placeholder {
+        /* Firefox 19+ */
+        color: #707070;
+    }
+    
+     :-ms-input-placeholder {
+        /* IE 10+ */
+        color: #707070;
+    }
+    
+     :-moz-placeholder {
+        /* Firefox 18- */
+        color: #707070;
+    }
 </style>
+
 <body>
-  <div class="wrapper">
-    <div class="link-box">
-      <input id="link1" type="text">
-      <i class="uil uil-copy copy-icon" onclick="copyToClipboard('link1')"></i>
-      <div class="tooltip" id="tooltip1">Copy to clipboard</div>
+    <div class="wrapper">
+        <div class="link-box">
+            <input id="link1" type="text">
+            <i class="uil uil-copy copy-icon" onclick="copyToClipboard('link1')"></i>
+            <div class="tooltip" id="tooltip1">Copy to clipboard</div>
+        </div>
+
+        <div class="link-box">
+            <input id="link2" type="text">
+            <i class="uil uil-copy copy-icon" onclick="copyToClipboard('link2')"></i>
+            <div class="tooltip" id="tooltip2">Copy to clipboard</div>
+        </div>
+
+        <button onclick="callREST()" class="generate-button">Generate a short Link</button>
     </div>
 
-    <div class="link-box">
-      <input id="link2" type="text">
-      <i class="uil uil-copy copy-icon" onclick="copyToClipboard('link2')"></i>
-      <div class="tooltip" id="tooltip2">Copy to clipboard</div>
-    </div>
+    <script>
+        function copyToClipboard(id) {
+            let copyText = document.getElementById(id);
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
 
-    <button class="generate-button">Generate a short Link</button>
-  </div>
+            // Get the tooltip element
+            let tooltip = document.getElementById("tooltip" + id.replace("link", ""));
 
-  <script>
-    function copyToClipboard(id) {
-      let copyText = document.getElementById(id);
-      copyText.select();
-      copyText.setSelectionRange(0, 99999);
-      navigator.clipboard.writeText(copyText.value);
+            // Change the tooltip text to "Copied"
+            tooltip.innerHTML = "Copied";
 
-      // Get the tooltip element
-      let tooltip = document.getElementById("tooltip" + id.replace("link", ""));
-      
-      // Change the tooltip text to "Copied"
-      tooltip.innerHTML = "Copied";
-      
-      // Show the tooltip
-      tooltip.style.opacity = "1";
-    }
+            // Show the tooltip
+            tooltip.style.opacity = "1";
+        }
 
-    // Hide the tooltip when the mouse moves away
-    function hideTooltip(id) {
-      let tooltip = document.getElementById("tooltip" + id.replace("link", ""));
-      tooltip.style.opacity = "0";
-    }
+        // Hide the tooltip when the mouse moves away
+        function hideTooltip(id) {
+            let tooltip = document.getElementById("tooltip" + id.replace("link", ""));
+            tooltip.style.opacity = "0";
+        }
 
-document.addEventListener("mouseup", function (event) {
-  var tooltip = document.getElementsByClassName("tooltip");
-  for (var i = 0; i < tooltip.length; i++) {
-    if (event.target !== tooltip[i] && !tooltip[i].contains(event.target)) {
-      tooltip[i].style.opacity = "0";
-      tooltip[i].innerHTML = "Copy to clipboard";
-    }
-  }
-});
-  </script>
+        document.addEventListener("mouseup", function(event) {
+            var tooltip = document.getElementsByClassName("tooltip");
+            for (var i = 0; i < tooltip.length; i++) {
+                if (event.target !== tooltip[i] && !tooltip[i].contains(event.target)) {
+                    tooltip[i].style.opacity = "0";
+                    tooltip[i].innerHTML = "Copy to clipboard";
+                }
+            }
+        });
+    </script>
+
+
+    <script>
+        function callREST() {
+            console.log("hitt");
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    document.getElementById("link2").value = this.responseText;
+                }
+            };
+            let short_url = document.getElementById('link1').value;
+            url = "http://127.0.0.1:5001/lavalab-url-shortener/us-central1/addUrl?url=" + short_url;
+            xhttp.open("GET", url, true);
+            xhttp.send();
+        }
+    </script>
+
+
 </body>
+
 </html>
